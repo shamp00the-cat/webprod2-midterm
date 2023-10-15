@@ -1,17 +1,19 @@
-import { REDIRECT_URI, CLIENT_SECRET, CLIENT_ID } from "../../vite.config";
+//import "dotenv/config";
+
+//import { Client } from "undici-types";
+
+//require("dotenv").config();
 
 function ListGroup() {
-  const items = [REDIRECT_URI, CLIENT_ID, CLIENT_SECRET];
-
-  return (
-    <>
-      <h1>List</h1>
-      <ul className="list-group">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </>
-  );
+  const ClientID = import.meta.env.VITE_CLIENT_ID;
+  const ClientSecret = import.meta.env.VITE_CLIENT_SECRET;
+  const RedirectURI = import.meta.env.VITE_REDIRECT_URI;
+  const items = [ClientID, RedirectURI, ClientSecret];
+  console.log(items);
 }
+
+export const ClientID = import.meta.env.VITE_CLIENT_ID;
+export const ClientSecret = import.meta.env.VITE_CLIENT_SECRET;
+export const RedirectURI = import.meta.env.VITE_REDIRECT_URI;
+
 export default ListGroup;
