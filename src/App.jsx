@@ -9,7 +9,8 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
-import { ClientID, ClientSecret, RedirectURI } from "./components/ListGroup";
+import { ClientID, ClientSecret } from "./components/ListGroup";
+import Login from "./Login";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -74,6 +75,7 @@ function App() {
   return (
     <div className="App">
       <Container>
+        <Button onClick={Login}>Login</Button>
         <InputGroup className="mb-3" size="lg">
           <FormControl
             placeholder="Search For Artist"
