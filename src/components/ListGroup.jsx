@@ -1,9 +1,3 @@
-//import "dotenv/config";
-
-//import { Client } from "undici-types";
-
-//require("dotenv").config();
-
 function ListGroup() {
   const ClientID = import.meta.env.VITE_CLIENT_ID;
   const ClientSecret = import.meta.env.VITE_CLIENT_SECRET;
